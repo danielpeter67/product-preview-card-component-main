@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+  </head>
+  <body class="bg-bright">
+    <div class="container flex">
+      <div class="preview-card grid">
+        <div class="product-img">
+          <img src="images/image-product-desktop.jpg" alt="" class="pd-img" />
+        </div>
+        <div class="product-text ff-serif m-block-auto p-inline-auto">
+          <h6
+            class="uppercase letter-sp-1 cl-fade ff-sans-normal fs-200 p-top-auto"
+          >
+            perfume
+          </h6>
+          <h2 class="perfume-name ff-serif fs-500 m-inline-auto m-block-auto">
+            Gabrielle Essence Eau De Parfum
+          </h2>
+          <p class="text-long cl-fade ff-sans-normal fs-200">
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <div class="flex">
+            <h3
+              class="cl-dark-green ff-serif fs-500"
+              style="margin-top: 0.5rem"
+            >
+              $149.99
+            </h3>
+            <p
+              class="cl-fade m-block-auto p-block-auto sold-out"
+              style="margin-top: 1rem"
+            >
+              $169.99
+            </p>
+          </div>
+          <button class="btn fs-400">
+            <img src="images/icon-cart.svg" alt="" /> Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="attribution fs-300 ff-serif">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >
+      Coded by <a href="#">Daniel Igoche</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,277 @@
+/* Custom properties */
+:root {
+  /* color */
+  --cl-bright: 317 72% 95%;
+  --cl-dark: 177 72% 33%;
+  --cl-light: 166 90% 23%;
+  --cl-black: 0 0% 0%;
+
+  /* font-size */
+  --fs-700: 3.9rem;
+  --fs-600: 2.2rem;
+  --fs-500: 2rem;
+  --fs-400: clamp(1.2rem, 1.2vw, 1.3rem);
+  --fs-300: 1.2rem;
+  --fs-200: 0.9rem;
+
+  /* font family */
+  --ff-serif: "Fraunces", serif;
+  --ff-sans-cond: "Barlow Condensed", sans-serif;
+  --ff-sans-normal: "Barlow", sans-serif;
+}
+
+/* Reset */
+*,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
+body {
+  line-height: 1;
+}
+
+/* ---------- */
+
+/* Utility classes     */
+.container {
+  padding: 5em 2em;
+  margin: auto;
+  max-width: 40rem;
+  height: auto;
+  align-items: center;
+}
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+/* ------------------- */
+.letter-sp-1 {
+  letter-spacing: 4.7px;
+}
+.letter-sp-2 {
+  letter-spacing: 2.7px;
+}
+.letter-sp-3 {
+  letter-spacing: 2.35px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fs-700 {
+  font-size: var(--fs-700);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+
+.bg-bright {
+  background-color: hsl(var(--cl-bright));
+}
+
+.cl-fade {
+  color: hsl(var(--cl-black) / 0.5);
+}
+.cl-black {
+  color: hsl(var(--cl-black));
+}
+.cl-dark-green {
+  color: hsl(var(--cl-dark));
+}
+.cl-light {
+  color: hsl(var(--cl-light));
+}
+
+.ff-serif {
+  font-family: var(--ff-serif);
+}
+.ff-sans-cond {
+  font-family: var(--ff-sans-cond);
+}
+.ff-sans-normal {
+  font-family: var(--ff-sans-normal);
+}
+
+.m-block-auto {
+  margin-block: 1.3rem;
+}
+.m-inline-auto {
+  margin-inline: 0.2rem;
+}
+
+.p-block-auto {
+  padding-block: 0.2rem;
+}
+.p-top-auto {
+  padding-top: 0.5rem;
+}
+
+.sold-out {
+  text-decoration: line-through;
+}
+/* components */
+.btn {
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background: hsl(177, 72%, 33%);
+  padding: 15px 65px 15px 65px;
+  text-decoration: none;
+  border-width: 0;
+  min-width: 10rem;
+  max-width: 20rem;
+}
+
+.btn:hover {
+  background: #064952;
+  text-decoration: none;
+}
+.preview-card {
+  grid-template-columns: 1fr 1fr;
+  min-width: 40rem;
+  border-radius: 10px;
+  background-color: hsl(0 0% 100%);
+  margin-top: 15%;
+}
+.preview-card > *:where(:not(:first-child)) {
+  margin-top: 2rem;
+}
+.product-text > *:where(:not(:last-child)) {
+  margin-bottom: 1.5rem;
+}
+.product-img {
+  position: relative;
+  min-width: 15rem;
+  height: auto;
+}
+.pd-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+}
+.product-text {
+  max-width: 30rem;
+  margin: 2rem;
+}
+.text-long {
+  line-height: 1.6;
+  word-spacing: 1px;
+  padding-right: 1rem;
+}
+
+.attribution {
+  text-align: center;
+}
+.attribution a {
+  color: hsl(235, 82%, 37%);
+  text-decoration: none;
+}
+.attribution > a:hover,
+.attribution > a:focus {
+  color: hsl(var(--cl-dark) / 1);
+}
+
+@media (max-width: 35rem) {
+  :root {
+    --fs-700: 2.5rem;
+    --fs-600: 1rem;
+    --fs-500: 2.35rem;
+    --fs-400: 1.2rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+  }
+  .container {
+    gap: 0;
+    padding: 0 1em;
+    margin: 0;
+  }
+
+  .preview-card {
+    display: grid;
+    gap: 0;
+    grid-template-columns: 1fr;
+    min-width: 25rem;
+    height: auto;
+    margin-top: 2%;
+    margin-bottom: 1em;
+  }
+  .preview-card > * {
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    /* border: 2px solid red; */
+  }
+  .product-text {
+    padding: 1rem 1.5rem;
+  }
+  .product-text > *:where(:not(:first-child)) {
+    padding: 0;
+    align-items: center;
+  }
+  .product-text > *:where(:not(:last-child)) {
+    margin-bottom: 0.7rem;
+  }
+
+  .product-img {
+    max-width: 35rem;
+    height: 20rem;
+  }
+  .pd-img {
+    position: relative;
+    width: 100;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+    border-radius: 10px 10px 0 0;
+  }
+  .text-long {
+    padding-right: 5rem;
+  }
+  .product-text > .btn {
+    min-width: 25rem;
+    padding: 0.8rem 7rem;
+    align-items: center;
+    margin-bottom: 0.6rem;
+  }
+  .product-text > .flex > p {
+    padding-bottom: 0.5em;
+    margin: 0;
+  }
+  .product-text > .flex > h3 {
+    margin: 0;
+  }
+}
